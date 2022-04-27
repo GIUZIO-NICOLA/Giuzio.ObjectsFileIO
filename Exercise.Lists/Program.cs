@@ -21,7 +21,7 @@ namespace Exercise.Lists
             // USE FILE STATIC FILE PATH !!!
 
             // Create a method to populate MockData
-
+            
             List<People> people = OriginalTextFileProcessor.loadFromFile<People>();
             
             Console.WriteLine(String.Empty);
@@ -35,12 +35,11 @@ namespace Exercise.Lists
             Console.WriteLine(String.Empty);
 
             OriginalTextFileProcessor.writeToFile<People>(people);
+            
 
-            /*
-            string[] properties = OriginalTextFileProcessor.GetProperties<People>();
-            for (int i = 0; i < properties.Length; i++)
-                Console.WriteLine(properties[i]);
-            */
+            //People person = new People(" 2, Marco, false".Split(','));
+            //Console.WriteLine(person.Name);
+
         }
 
 
