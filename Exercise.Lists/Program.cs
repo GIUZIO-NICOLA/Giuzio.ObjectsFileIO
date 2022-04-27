@@ -32,6 +32,10 @@ namespace Exercise.Lists
                 { Console.WriteLine(p.ToString()); }
             }
 
+            Console.WriteLine(String.Empty);
+
+            OriginalTextFileProcessor.writeToFile<People>(people);
+
             /*
             string[] properties = OriginalTextFileProcessor.GetProperties<People>();
             for (int i = 0; i < properties.Length; i++)
