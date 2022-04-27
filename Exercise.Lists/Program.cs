@@ -1,4 +1,9 @@
-﻿namespace Exercise.Lists
+﻿using Exercise.Lists.Models;
+using Exercise.Lists.Utils;
+using System;
+using System.Collections.Generic;
+
+namespace Exercise.Lists
 {
     internal class Program
     {
@@ -14,8 +19,27 @@
 
             // use a utility class to create STANDARD METHODS to manager both situation !!
             // USE FILE STATIC FILE PATH !!!
+
+            // Create a method to populate MockData
+
+            List<People> people = OriginalTextFileProcessor.loadFromFile<People>();
+            
+            Console.WriteLine(String.Empty);
+
+            if (people != null)
+            {
+                foreach (People p in people)
+                { Console.WriteLine(p.ToString()); }
+            }
+
+            /*
+            string[] properties = OriginalTextFileProcessor.GetProperties<People>();
+            for (int i = 0; i < properties.Length; i++)
+                Console.WriteLine(properties[i]);
+            */
         }
 
-        // Create a method to populate MockData
+
+
     }
 }
